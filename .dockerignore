@@ -1,0 +1,33 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.env
+.venv
+env/
+venv/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Project specific
+data/pdfs/*
+data/vector_db/*
+data/logs/*
+!data/pdfs/.gitkeep
+!data/vector_db/.gitkeep
+!data/logs/.gitkeep
+
+# Docker
+Dockerfile
+.dockerignore 
