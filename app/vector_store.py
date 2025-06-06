@@ -15,7 +15,7 @@ class VectorStore:
         self.index = None
         self.documents = []
         # Initialize the embedding model
-        self.embedding_model = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
+        self.embedding_model = GoogleGenerativeAIEmbeddings(model=EMBEDDING_MODEL)
         self._load_or_create_index()
         self._load_documents()
 

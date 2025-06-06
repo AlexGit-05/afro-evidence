@@ -75,12 +75,16 @@ def process_pdf(pdf_path):
         content = ""
         for page in doc:
             content += page.get_text()
+
+        # Clean the text: remove multiple newlines and replace them with a single space
+        cleaned_content = re.sub(r'\s*\n\s*', ' ', content)
+        cleaned_content = re.sub(r'\s{2,}', ' ', cleaned_content).strip()
         
         title, citation_info, doi, keywords = extract_title_footer_doi_keywords(pdf_path)
         
         return {
             "title": title,
-            "content": content,
+            "content": cleaned_content,
             "doi": doi,
             "keywords": keywords,
             "metadata": {
