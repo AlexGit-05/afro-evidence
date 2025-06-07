@@ -25,7 +25,7 @@ async def query_documents(request: QueryRequest):
         context = "\n\n".join([f"Title: {doc['title']}\nContent: {doc['content']}" for doc in relevant_docs])
         
         # Create one-shot prompt with example
-        prompt = f"""You are a medical research assistant. Answer questions based on the provided context in markdown format. Include a list of DOI references at the end.
+        prompt = f"""You are a medical research assistant. Answer questions based on the provided context in markdown format. Include a list of to 5 relevant DOI references at the end.
 
 Example:
 Context:
