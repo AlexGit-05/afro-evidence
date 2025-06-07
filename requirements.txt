@@ -9,4 +9,6 @@ pydantic==2.6.1
 python-multipart==0.0.9
 loguru==0.7.2
 langchain-google-genai>=0.0.5
+fitz==0.23.0
+langchain==0.2.0
  

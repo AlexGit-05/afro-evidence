@@ -26,11 +26,11 @@ RUN mkdir -p data/pdfs data/vector_db data/logs
 # Set environment variables
 ENV PYTHONPATH=/app
 ENV APP_HOST=0.0.0.0
-ENV APP_PORT=8000
+ENV APP_PORT=8004
 ENV APP_DEBUG=false
 
 # Expose port
-EXPOSE 8000
+EXPOSE 8004
 
 # Run the application
 CMD ["python", "main.py"] 

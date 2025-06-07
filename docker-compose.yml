@@ -6,17 +6,17 @@ services:
     platform: linux/amd64
     image: rag-app:latest
     ports:
-      - "0.0.0.0:8000:8000"
+      - "0.0.0.0:8004:8004"
     environment:
       - GOOGLE_API_KEY=${GOOGLE_API_KEY}
       - APP_HOST=0.0.0.0
-      - APP_PORT=8000
+      - APP_PORT=8004
       - APP_DEBUG=false
     volumes:
       - ./data:/app/data
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8000/docs"]
+      test: ["CMD", "curl", "-f", "http://localhost:8004/docs"]
       interval: 30s
       timeout: 10s
       retries: 3
