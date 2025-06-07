@@ -20,9 +20,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy application code
 COPY . .
 
-# Create necessary directories
-RUN mkdir -p data/logs
-
 # Set environment variables
 ENV PYTHONPATH=/app
 ENV APP_HOST=0.0.0.0
